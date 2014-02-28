@@ -14,14 +14,22 @@ Group related resources of the **kartverket/test API**
         [
             {
                 id: 20,
-                name: "Finnmark",
+                name: {
+                    nnb: "Finnmark",
+                    nno: "Finnmark",
+                    sme: "Finnmárku"
+                },
                 placename_uris: [
                     "/placename/123456789"
                 ],
                 geojson: "/geojson/county-20-1.geojson"
             }, {
                 id: 19,
-                name: "Troms",
+                name: {
+                    nnb: "Troms",
+                    nno: "Troms",
+                    sme: "Romssa"
+                },
                 placename_uris: [
                     "/placename/987654321"
                 ],
@@ -40,7 +48,11 @@ A single County object with all its details
 
         {
             id: 20,
-            name: "Finnmark",
+            name: {
+                nnb: "Finnmark",
+                nnn: "Finnmark",
+                sme: "Finnmárku"
+            },
             placename_uris: [
                 "/placename/123456789"
             ],
