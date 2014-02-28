@@ -3,11 +3,21 @@ kartverket data transformer
 
 Creates a MultiPolygon .geojson for each region in the abas files from kartverket.
 
-A region can be a municipality or county.
+To check the number of MultiPolygon .geojson files that will be created use:
 
-Run the script using node (requires underscore).
-
+```
 sudo node transformer.js counties true
 sudo node transformer.js municipalities true
+```
 
-If last variable is left out (or false) .geojson files will not be created and saved. The script wil only output number of regions (MuliPloygons) present in the original data.
+Number of counties should be 19.
+Number of municipalities should be 428.
+
+To create and save all 19 or 428 .geojson files use:
+
+```
+sudo node transformer.js counties true
+sudo node transformer.js municipalities true
+```
+
+PS: underscore is a requires module.
