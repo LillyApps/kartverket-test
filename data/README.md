@@ -6,8 +6,8 @@ Creates a MultiPolygon .geojson for each region in the abas files from kartverke
 To check the number of MultiPolygon .geojson files that will be created use:
 
 ```
-sudo node transformer.js counties true
-sudo node transformer.js municipalities true
+sudo node transformer.js counties
+sudo node transformer.js municipalities
 ```
 
 Number of counties should be 19.
