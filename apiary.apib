@@ -11,11 +11,23 @@ Group related resources of the **kartverket/test API**
 ### List all Counties [GET]
 + Response 200 (application/json)
 
-        [{
-          "id": 20, "name": "Finnmark"
-        }, {
-          "id": 19, "name": "Troms"
-        }]
+        [
+            {
+                id: 20,
+                name: "Finnmark",
+                placename_uris: [
+                    "/placename/123456789"
+                ],
+                geojson: "/geojson/county-20-1.geojson"
+            }, {
+                id: 19,
+                name: "Troms",
+                placename_uris: [
+                    "/placename/987654321"
+                ],
+                geojson: "/geojson/county-19-1.geojson"
+            }
+        ]
 
 ## County [/counties/{id}]
 A single County object with all its details
