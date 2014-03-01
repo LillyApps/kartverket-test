@@ -60,10 +60,31 @@ A single County object with all its details
 # Group Norwegian Placenames
 
 ## Placename [/placenames/{ssr_id}]
-A single placename object as a geojson
+A single placename object
 
 + Parameters
     + id (required, number, `1234356`) ... Numeric `ìd` of the Placename in the 'Statens stedsnavnsregister' database. Has example value.
+
+### Retrieve a Placename object [GET]
++ Response 200 (application/json)
+
+        {
+            "name_type_group":5,
+            "name_type_code":108,
+            "official_status":"G",
+            "language_code":"NO",
+            "ssr_id":1935,
+            "display_name":"Hoggandvik",
+            "municipality_code":"1002",
+            "county_code":"010",
+            "coordinates":[
+                58.039100000000005,
+                7.363375
+            ]
+        }
+
+## Placename geojson [/placenames/{ssr_id}/geojson]
+A single placename object in geojson format
   
 ### Retrieve a Placename geojson [GET]
 + Response 200 (application/json)
@@ -71,27 +92,11 @@ A single placename object as a geojson
         {
             "type":"Feature",
             "properties":{
-                "skr_snskrstat":"V",
-                "enh_ssr_id":3380,
-                "for_kartid":"",
-                "for_regdato":19990507,
-                "skr_sndato":19950214,
-                "enh_snmynd":"SK",
-                "for_sist_endret_dt":20050331,
-                "enh_snspraak":"NO",
-                "nty_gruppenr":2,
-                "enh_snavn":"Litlatjørna",
-                "enh_komm":1101,
-                "enh_ssrobj_id":3393,
-                "enh_sntystat":"H",
-                "enh_navntype":32,
-                "for_snavn":"Litlatjørna",
-                "kom_fylkesnr":11,
-                "kpr_tekst":"N50 Kartdata"
+                "id":3380
             },
             "geometry":{
-            "type":"Point",
-            "coordinates":[
+                "type":"Point",
+                "coordinates":[
                     5.860310999999999,
                     58.496517000000004
                 ]
