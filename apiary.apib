@@ -1,7 +1,7 @@
 FORMAT: 1A
 HOST: http://kartverkettest.herokuapp.com
 
-# kartverket/test
+# kartverket/test api
 kartverket/test api is a sandbox for testing Lilly Labs' Kartverket REST APIs
 
 # Group Norwegian Administrative Units
@@ -59,7 +59,7 @@ A single County object with all its details
 
 # Group Norwegian Placenames
 
-## Placename [/placenames/{ssr_id}]
+## Placename [/placenames/{ssr_id}{?geojson}]
 A single placename object
 
 + Parameters
@@ -82,15 +82,8 @@ A single placename object
                 7.363375
             ]
         }
-
-## Placename geojson [/placenames/{ssr_id}/geojson]
-A single placename object in geojson format
-
-+ Parameters
-    + id (required, number, `1234356`) ... Numeric `ìd` of the Placename in the 'Statens stedsnavnsregister' database. Has example value.
-  
-### Retrieve a Placename geojson [GET]
-+ Response 200 (application/json)
+        
++ Response 200 (application/geojson)
 
         {
             "type":"Feature",
