@@ -13,7 +13,7 @@ Group related resources of the **kartverket/test API**
 
         [
             {
-                id: 20,
+                county_code: 20,
                 name: {
                     no: "Finnmark",
                     se: "Finnmárku"
@@ -23,7 +23,7 @@ Group related resources of the **kartverket/test API**
                 ],
                 geojson: "/geojson/county-20-1.geojson"
             }, {
-                id: 19,
+                county_code: 19,
                 name: {
                     no: "Troms",
                     se: "Romssa"
@@ -35,17 +35,17 @@ Group related resources of the **kartverket/test API**
             }
         ]
 
-## County [/counties/{id}]
+## County [/counties/{county_code}]
 A single County object with all its details
 
 + Parameters
-    + id (required, number, `20`) ... Numeric `id` of the County to perform action with. Has example value.
+    + county_code (required, number, `20`) ... Numeric `id` of the County to perform action with. Has example value.
 
 ### Retrieve a County summary [GET]
 + Response 200 (application/json)
 
         {
-            id: 20,
+            county_code: 20,
             name: {
                 nb: "Finnmark",
                 nn: "Finnmark",
@@ -63,7 +63,7 @@ A single County object with all its details
 A single placename object
 
 + Parameters
-    + id (required, number, `1234356`) ... Numeric `ìd` of the Placename in the 'Statens stedsnavnsregister' database. Has example value.
+    + ssr_id (required, number, `1234356`) ... Numeric `ssr_ìd` of the Placename in the 'Statens stedsnavnsregister' database. Has example value.
 
 ### Retrieve a Placename object [GET]
 + Response 200 (application/json)
@@ -76,7 +76,7 @@ A single placename object
             "ssr_id":1935,
             "display_name":"Hoggandvik",
             "municipality_code":"1002",
-            "county_code":"010",
+            "county_code":"10",
             "coordinates":[
                 58.039100000000005,
                 7.363375
