@@ -1,5 +1,10 @@
-/*jslint node: true, nomen: true, vars: true */
-/*global Parse, unescape */
+/*jslint 
+    node: true, 
+    nomen: true, 
+    vars: true 
+*/
+/*global 
+ */
 
 'use strict';
 
